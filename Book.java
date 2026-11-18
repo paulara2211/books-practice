@@ -12,4 +12,7 @@ public class Book {
     public void describe() {
         System.out.println("\"" + title + "\" by " + author + ", " + pages + " pages.");
     }
+    public String getTitle() {
+        return title;
+    }
 }

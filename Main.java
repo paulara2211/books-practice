@@ -1,9 +1,17 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Book first = new Book("Clean Code", "Robert Martin", 464);
-        Book second = new Book("Tales of Mystery and Imagination", "Edgar Allan Poe", 230);
+        ArrayList<Book> library = new ArrayList<>();
 
-        first.describe();
-        second.describe();
+        library.add(new Book("Clean Code", "Robert Martin", 464));
+        library.add(new Book("Tales of Mystery and Imagination", "Edgar Allan Poe", 230));
+        library.add(new Book("1984", "George Orwell", 25));
+
+        for (Book book : library) {
+            System.out.println(book.getTitle());
+        }
+
+        System.out.println("Total books: " + library.size());
     }
 }
