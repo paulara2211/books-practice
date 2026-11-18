@@ -11,7 +11,20 @@ public class Main {
         for (Book book : library) {
             System.out.println(book.getTitle());
         }
+        for (Book book : library) {
+            if (book.getPages() > 300) {
+                System.out.println("Long book: " + book.getTitle());
+            }
+        }
+            Book longest = library.get(0);
 
+            for (Book book : library) {
+                if (book.getPages() > longest.getPages()) {
+                    longest = book;
+                }
+            }
+            System.out.println("Longest book: " + longest.getTitle());  
+      
         System.out.println("Total books: " + library.size());
     }
 }
